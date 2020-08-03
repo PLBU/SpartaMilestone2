@@ -1,6 +1,6 @@
 * { 
     /* '*' artinya semua element Klo misal mo ganti font tinggal tambahin aja .ttf nya trus ganti src d bwh*/
-    font-family: namaIniGkNgaruh;
+    font-family: ubuntu;
     src: url(./Ubuntu-Regular.ttf);
 }
 
