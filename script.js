@@ -15,13 +15,16 @@ function addPlot(){
    statButton.setAttribute("data-toggle", "modal")
    statButton.setAttribute("data-target", "#myModal")
 
-   const deleteButton = document.getElementById("delete-plot")
+   const deleteButton = document.createElement("button")
+   deleteButton.className = "content button"
+   deleteButton.innerHTML = "Delete"
    deleteButton.onclick = ( () => {
       plotItem.remove()
    })
 
    statButton.appendChild(plotName)
    plotItem.appendChild(statButton)
+   plotItem.appendChild(deleteButton)
    plotList.insertBefore(plotItem, plotList.childNodes[plotList.childElementCount-1]);
 }
 
