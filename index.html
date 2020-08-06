@@ -5,38 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Dengan bootstrap ini websitenya uda responsive -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <!-- Kalau misal ada tambahan styling bs d tambah d bwh -->
     <link rel="stylesheet" href="./styles.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
+
   <body>
     <div class="jumbotron text-center">
-      <h1>Solusi Ketahanan Pangan di Indonesia</h1>
+      <h1 class="text-white">Smart Farming</h1>
     </div>
+
     <div class="container-fluid">
-      <div class="row">
+      <div class="row" id="plot-list">
         <div class="col-sm-4 d-flex justify-content-center">
-          <div class="content">
-            <h3>Temperature</h3>
-            <p id="temperature"></p>
-            <p id="temp-indicator"></p>
-          </div>
-        </div>
-        <div class="col-sm-4 d-flex justify-content-center">
-          <div class="content">
-            <h3>Water level</h3>
-            <p id="water">Testing</p>
-            <p id="water-indicator">testing</p>
-          </div>
-        </div>
-        <div class="col-sm-4 d-flex justify-content-center">
-          <div class="content">
-            <h3>Soil quality</h3>
-            <p id="soil">Testing again</p>
-            <p id="soil-indicator">again</p>
-          </div>
+          <button class="content button" onClick="addPlot()">
+            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="black" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
+              <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
+              <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class= "content">
+              Contoh ya
+              <p id="temperature"></p>
+              <p id="temp-indicator"></p>
+              <!-- Buat Logicnya tinggal di buka di script.js kalian tambah2in aja -->
+            </div>
+
+            <!-- Di bawah ini yang tolong dikerjakan ya gengs -->
+            <div>
+                Kelembapan 
+            </div>
+            <div>
+                Kadar nutrisi
+            </div>
+            <div>
+                Pencahayaan
+            </div>
+            <div>
+                Suhu
+            </div>
+            <div>
+                Kualitas tanah
+            </div>
+
+            <button id="delete-plot" data-dismiss="modal">
+              Delete Plot
+            </button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
     <script src="./script.js"></script>
   </body>
 </html>

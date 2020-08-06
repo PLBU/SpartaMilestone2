@@ -1,3 +1,30 @@
+var plotCount = 0
+const plotList = document.getElementById("plot-list")
+
+function addPlot(){
+   plotCount += 1
+   const plotItem = document.createElement("div")
+   plotItem.className = "col-sm-4 d-flex justify-content-center"
+
+   const plotName = document.createElement("h4")
+   plotName.innerHTML = 'Plot ' + String(plotCount)
+
+   const statButton = document.createElement("button")
+   statButton.className = "content button"
+   statButton.setAttribute("type", "button")
+   statButton.setAttribute("data-toggle", "modal")
+   statButton.setAttribute("data-target", "#myModal")
+
+   const deleteButton = document.getElementById("delete-plot")
+   deleteButton.onclick = ( () => {
+      plotItem.remove()
+   })
+
+   statButton.appendChild(plotName)
+   plotItem.appendChild(statButton)
+   plotList.insertBefore(plotItem, plotList.childNodes[plotList.childElementCount-1]);
+}
+
 function generateRandomNumber() {
    //Generate random number from 1 to 40
    return Math.floor((Math.random() * 40) + 1) 

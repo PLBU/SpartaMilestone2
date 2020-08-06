@@ -18,3 +18,11 @@ h3 {
     padding: 48px;
     margin: 32px;
 }
+
+.button {
+    background-color: white;
+}
+
+.button:hover {
+    background-color: rgb(220, 220, 220);
+}
