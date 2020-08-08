@@ -48,8 +48,8 @@ function tempIndicator(temp){
 function indikatorsuhu(x){
    var stat
 
-   if (0 < x && x <= 20 ) stat = "Suhu terlalu dingin"
-   else if (20 < x && x < 30) stat = "Suhu cukup"
+   if (x <= 15 ) stat = "Suhu terlalu dingin"
+   else if (15 < x && x < 31) stat = "Suhu cukup"
    else stat = "Suhu terlalu panas"
 
    document.getElementById('ind-suhu').innerHTML = stat
@@ -61,7 +61,7 @@ function indikatorsuhu(x){
 function infiniteLoop(){
    //Change the temperature to a random number
    document.getElementById('temperature').innerHTML = String(generateRandomNumber() )
-   document.getElementById('suhu').innerHTML = String(generateRandomNumber() )
+   document.getElementById('suhu').innerHTML = String(generateRandomNumber()+"℃")
    let temp = parseInt(document.getElementById('temperature').innerHTML)
    let x = parseInt(document.getElementById('suhu').innerHTML)
    //Logic indicator with parameter temp
