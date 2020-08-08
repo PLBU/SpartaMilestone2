@@ -59,3 +59,37 @@ function infiniteLoop(){
 }
 
 infiniteLoop()
+
+function generateRandompH() {
+   //Generate random number from 0 to 14 
+   return Math.floor((Math.random() * 14) + 1) 
+}
+
+function pHIndicator(ph){
+   var stat
+
+   if (ph > 6.0 && ph < 7.0) stat = "Suasana optimal"
+   else if (ph >= 3.0 && ph <= 6.0) stat = "Suasana asam"
+   else if (ph >= 7.0 && ph <= 10.0) stat = "Suasana basa"
+   else if (ph > 10.0) stat = "Suasana terlalu basa"
+   else stat = "Suasana terlalu asam"
+   
+   document.getElementById('ph-indicator').innerHTML = stat
+}
+
+// Infinite loop with interval 1 second
+function infiniteLooppH(){
+   //Change the temperature to a random number
+   document.getElementById('ph').innerHTML = String(generateRandompH() )
+
+   let ph = parseInt(document.getElementById('ph').innerHTML)
+
+   //Logic indicator with parameter ph
+   pHIndicator(ph)
+
+   setTimeout(() => {
+      infiniteLooppH()
+   }, 1000);
+}
+
+infiniteLooppH()
