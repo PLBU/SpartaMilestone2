@@ -48,9 +48,9 @@ function tempIndicator(temp){
 function indikatorsuhu(x){
    var stat
 
-   if (x <= 15 ) stat = "Suhu terlalu dingin"
-   else if (15 < x && x < 31) stat = "Suhu cukup"
-   else stat = "Suhu terlalu panas"
+   if (x <= 15 ) stat = "Suhu terlalu dingin. Atur suhu hingga sekitar 16℃-30℃"
+   else if (15 < x && x < 31) stat = "Suhu cukup."
+   else stat = "Suhu terlalu panas. Atur suhu hingga sekitar 16℃-30℃"
 
    document.getElementById('ind-suhu').innerHTML = stat
 }
