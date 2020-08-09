@@ -28,27 +28,29 @@ function addPlot(){
    plotList.insertBefore(plotItem, plotList.childNodes[plotList.childElementCount-1]);
 }
 
+// Buat generate random kelembapan
 function generateRandomNumber() {
-   //Generate random number from 40 to 65
-   return Math.floor(40 + (Math.random() * 26))
+   //Generate random number from 40 to 99
+   return Math.floor(40 + (Math.random() * 60))
 }
 
+// Indikator kelembapan, abis searching katanya 60-90% cukup, tapi kalo mau diubah lagi sabeb sihh
 function humidityIndicator(humidity){
    var stat
 
-   if (40 <= humidity && humidity < 50 ) stat = "Terlalu rendah, ambil tindakan!"
-   else if (50 <= humidity && humidity <= 55) stat = "Santuy"
+   if (40 <= humidity && humidity < 60 ) stat = "Terlalu rendah, ambil tindakan!"
+   else if (60 <= humidity && humidity <= 90) stat = "Cukup"
    else stat = "Terlalu tinggi, ambil tindakan!"
 
-   document.getElementById('indicator').innerHTML = stat
+   document.getElementById('humidity-indicator').innerHTML = stat
 }
 
-// Infinite loop with interval 1 second
+// Infinite loop with interval 5 second
 function infiniteLoop(){
-   //Change the temperature to a random number
-   document.getElementById('percentage').innerHTML = String(generateRandomNumber() + "%")
+   //Change the humidity to a random number
+   document.getElementById('humidity').innerHTML = String(generateRandomNumber() + "%")
 
-   let humidity = parseInt(document.getElementById('percentage').innerHTML)
+   let humidity = parseInt(document.getElementById('humidity').innerHTML)
 
    //Logic indicator with parameter temp
    humidityIndicator(humidity)
