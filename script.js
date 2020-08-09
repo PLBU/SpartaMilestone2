@@ -1,7 +1,7 @@
-var plotCount = 0
-const plotList = document.getElementById("plot-list")
-
 function addPlot(){
+   var plotCount = 0
+   const plotList = document.getElementById("plot-list")
+
    plotCount += 1
    const plotItem = document.createElement("div")
    plotItem.className = "col-sm-4 d-flex justify-content-center"
@@ -28,56 +28,14 @@ function addPlot(){
    plotList.insertBefore(plotItem, plotList.childNodes[plotList.childElementCount-1]);
 }
 
-function generateRandomNumber() {
+function generateRandompH() {
+   //Generate random number from 1 to 14 
+   return Math.floor((Math.random() * 14) + 1) 
+}
+
+function generateRandomTemp() {
    //Generate random number from 1 to 40
    return Math.floor((Math.random() * 40) + 1) 
-}
-
-function tempIndicator(temp){
-   var stat
-
-   if (0 < temp && temp <= 20 ) stat = "Too cold"
-   else if (20 < temp && temp < 30) stat = "Just right"
-   else stat = "Too hot"
-
-   document.getElementById('temp-indicator').innerHTML = stat
-}
-
-
-
-function indikatorsuhu(x){
-   var stat
-
-   if (x <= 15 ) stat = "Suhu terlalu dingin. Atur suhu hingga sekitar 16℃-30℃"
-   else if (15 < x && x < 31) stat = "Suhu cukup."
-   else stat = "Suhu terlalu panas. Atur suhu hingga sekitar 16℃-30℃"
-
-   document.getElementById('ind-suhu').innerHTML = stat
-}
-
-
-
-// Infinite loop with interval 1 second
-function infiniteLoop(){
-   //Change the temperature to a random number
-   document.getElementById('temperature').innerHTML = String(generateRandomNumber() )
-   document.getElementById('suhu').innerHTML = String(generateRandomNumber()+"℃")
-   let temp = parseInt(document.getElementById('temperature').innerHTML)
-   let x = parseInt(document.getElementById('suhu').innerHTML)
-   //Logic indicator with parameter temp
-   tempIndicator(temp)
-   indikatorsuhu(x)
-
-   setTimeout(() => {
-      infiniteLoop()
-   }, 1000);
-}
-
-infiniteLoop()
-
-function generateRandompH() {
-   //Generate random number from 0 to 14 
-   return Math.floor((Math.random() * 14) + 1) 
 }
 
 function pHIndicator(ph){
@@ -92,19 +50,31 @@ function pHIndicator(ph){
    document.getElementById('ph-indicator').innerHTML = stat
 }
 
+function indikatorsuhu(x){
+   var stat
+
+   if (x <= 15 ) stat = "Suhu terlalu dingin. Atur suhu hingga sekitar 16℃-30℃"
+   else if (15 < x && x < 31) stat = "Suhu cukup."
+   else stat = "Suhu terlalu panas. Atur suhu hingga sekitar 16℃-30℃"
+
+   document.getElementById('ind-suhu').innerHTML = stat
+}
+
 // Infinite loop with interval 1 second
-function infiniteLooppH(){
+function infiniteLoop(){
    //Change the temperature to a random number
+   document.getElementById('suhu').innerHTML = String(generateRandomTemp()+"℃")
    document.getElementById('ph').innerHTML = String(generateRandompH() )
 
    let ph = parseInt(document.getElementById('ph').innerHTML)
-
-   //Logic indicator with parameter ph
+   let temp = parseInt(document.getElementById('suhu').innerHTML)
+   //Logic indicator with parameter temp
+   indikatorsuhu(temp)
    pHIndicator(ph)
 
    setTimeout(() => {
-      infiniteLooppH()
+      infiniteLoop()
    }, 1000);
 }
 
-infiniteLooppH()
+infiniteLoop()
