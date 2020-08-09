@@ -59,3 +59,33 @@ function infiniteLoop(){
 }
 
 infiniteLoop()
+
+function generateRandomN(){
+   //generate random number from 0 to 100 
+   return Math.floor((Math.random()*100)+1)
+}
+
+const nitro = document.getElementById('N')
+const nitroindicator = document.getElementById('N-indicator')
+
+function Nindicator(N){
+   if (N<10) return "Sangat rendah"
+   else if (N>=10 && N <=20) return "Rendah"
+   else if (N>20 && N <=50) return "Sedang"
+   else if (N>50 && N <= 75) return "Tinggi"
+   else return "Sangat tinggi"
+ 
+}
+
+function infiniteLoopN(){
+   const N = generateRandomN()
+
+   nitro.innerHTML = String(N)
+   nitroindicator.innerHTML = Nindicator(N)
+
+   setTimeout(() => {
+      infiniteLoopN()
+   },2000)// tiap 2 sekon
+}
+
+infiniteLoopN()
