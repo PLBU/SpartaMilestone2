@@ -2,10 +2,37 @@
     /* '*' artinya semua element Klo misal mo ganti font tinggal tambahin aja .ttf nya trus ganti src d bwh*/
     font-family: ubuntu;
     src: url(./Ubuntu-Regular.ttf);
+    color: rgb(47, 63, 77);
 }
 
-.jumbotron{
-    background-color: rgb(250, 125, 40) !important; 
+.vertical-center {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  /* transform: translateY(-50%); */
+}
+
+.title {
+    font-family: Yeseva One;
+    src: url(./YesevaOne-Regular.ttf);
+}
+
+html, body{
+    background-color: #d5cec1;
+    height: 100%;
+}
+
+.landing-page{
+    background-color: rgb(249, 249, 249) !important; 
+    height: 100%;
+    
+}
+
+.pos{
+    position:absolute;
+    top:50px;
+    /* right:50%; */
+    /* margin-right:200px; */
 }
 
 h3 {
@@ -13,16 +40,83 @@ h3 {
 }
 
 .content{
-    border: solid lightgray 3px;
     border-radius: 20%;
     padding: 48px;
     margin: 32px;
+    filter: drop-shadow(0px 0px 5px  gray);
+}
+
+.plot-list-content{
+    background-color: #f2f1ef;
+    border-radius: 25px;
+    padding-top: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 200px;
+    margin: 32px;
+}
+
+.plot-content{
+    background-color: #f2f1ef;
+    border-radius: 20px;
+    padding-bottom: 34px;
+    margin: 32px;
+    filter: drop-shadow(0px 0px 5px  lightgray);
+}
+
+.plot-img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+.plot-check{
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius: 20px;
+    border-color: gray;
+}
+
+.plus-button{
+    background-color: #b64e43;
+    border-radius: 35px;
+    border: none;
+    position: sticky;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 26px;
+    width: 70px; 
+    height: 70px; 
+}
+
+.fa-arrow-right, .fa-plus{
+    color: #f2f1ef;
 }
 
 .button {
-    background-color: white;
+    border: none;
+    background-color: #f2f1ef;
 }
 
 .button:hover {
     background-color: rgb(220, 220, 220);
+}
+
+.start-button{
+    background-color: rgb(243, 197, 143);
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #f2f1ef;
+}
+
+.credits{
+    background-color: #b64e43;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 32px;
+    padding-bottom: 82px;
+    color: #f2f1ef;
 }

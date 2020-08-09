@@ -4,28 +4,54 @@ const plotList = document.getElementById("plot-list")
 function addPlot(){
    plotCount += 1
    const plotItem = document.createElement("div")
-   plotItem.className = "col-sm-4 d-flex justify-content-center"
+   plotItem.className = "d-flex justify-content-center"
+
+   const plotTextHolder = document.createElement("div")
+   plotTextHolder.setAttribute("style", "padding: 10px");
 
    const plotName = document.createElement("h4")
    plotName.innerHTML = 'Plot ' + String(plotCount)
 
-   const statButton = document.createElement("button")
-   statButton.className = "content button"
-   statButton.setAttribute("type", "button")
-   statButton.setAttribute("data-toggle", "modal")
-   statButton.setAttribute("data-target", "#myModal")
+   const plotPlant = document.createElement("h6")
+   plotPlant.innerHTML = 'Tanaman : Wortel'
 
-   const deleteButton = document.createElement("button")
-   deleteButton.className = "content button"
-   deleteButton.innerHTML = "Delete"
+   const plotImage = document.createElement("img")
+   plotImage.setAttribute("src", "./placeholder-plot.png")
+   plotImage.className = "plot-img button img-fluid"
+
+   const plotHolder = document.createElement("div")
+   plotHolder.className = "plot-content"
+   
+   const checkPlot = document.createElement("button")
+   checkPlot.innerHTML = "Details"
+   checkPlot.className = "plot-check btn btn-outline float-right"
+   checkPlot.setAttribute("type", "button")
+   checkPlot.setAttribute("data-toggle", "modal")
+   checkPlot.setAttribute("data-target", "#myModal")
+   
+   //const statButton = document.createElement("button")
+   //statButton.className = "plot-content button"
+   //statButton.setAttribute("type", "button")
+   //statButton.setAttribute("data-toggle", "modal")
+   //statButton.setAttribute("data-target", "#myModal")
+
+   plotHolder.appendChild(plotImage)
+   plotTextHolder.appendChild(plotName)
+   plotTextHolder.appendChild(plotPlant)
+   plotTextHolder.appendChild(checkPlot)
+   plotHolder.appendChild(plotTextHolder)
+   //statButton.appendChild(plotImage)
+   //statButton.appendChild(plotName)
+   //plotItem.appendChild(statButton)
+   plotItem.appendChild(plotHolder)
+   //plotItem.appendChild(deleteButton)
+   plotList.insertBefore(plotItem, plotList.childNodes[plotList.childElementCount-1]);
+}
+
+function deletePlot(){
    deleteButton.onclick = ( () => {
       plotItem.remove()
    })
-
-   statButton.appendChild(plotName)
-   plotItem.appendChild(statButton)
-   plotItem.appendChild(deleteButton)
-   plotList.insertBefore(plotItem, plotList.childNodes[plotList.childElementCount-1]);
 }
 
 function generateRandomNumber() {
