@@ -196,4 +196,8 @@ h3 {
     .intro{
         font-size: large;
     }
+
+    #plot-list{
+        justify-content: center;
+    }
 }
