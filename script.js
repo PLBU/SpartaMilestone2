@@ -17,6 +17,7 @@ function addPlot(){
    statButton.setAttribute("data-target", "#myModal")
    statButton.onclick = ( () => {
       document.getElementById('modal-title').innerHTML = "Status " + plotName.innerHTML
+      infiniteLoop()
    })
 
    const deleteButton = document.createElement("button")
@@ -121,7 +122,7 @@ function infiniteLoop(){
    document.getElementById('humidity').innerHTML = String(generateRandomHumidity() + "%")
 
    light.innerHTML = String(amountOfLight)
-   nitro.innerHTML = String(N)
+   nitro.innerHTML = String(N) + "%"
 
    let ph = parseInt(document.getElementById('ph').innerHTML)
    let temp = parseInt(document.getElementById('suhu').innerHTML)
@@ -137,7 +138,5 @@ function infiniteLoop(){
 
    setTimeout(() => {
       infiniteLoop()
-   }, 1000);
+   }, 10000);
 }
-
-infiniteLoop()
