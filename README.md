@@ -5,3 +5,4 @@
 
 ### Pembagian Jobdesk:
 Renaldi Arlin (16519199) - Logic addPlot & deleteButton, Pembuatan modal, Merging & Deploying
+Faris Aziz (16519231) - Bagian suhu
