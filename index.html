@@ -16,10 +16,10 @@
   <body>
     <!-- Landing Page -->
     <div class="col-12 landing-page" style="padding: 3em;">
-      <div class="row container-fluid">
-        <div class="col-6 justify-content-center align-self-center">
-          <h1 class="text-gray title" style="font-size: 4em;">Smart Farming System</h1>
-          <p style="text-align: justify; font-size: 18px; margin-top: 1em; margin-bottom: 1em;">
+      <div class="row container-fluid lander">
+        <div class="halfCell justify-content-center align-self-center">
+          <h1 class="text-gray title smartTitle" style="font-size: 4em;">Smart Farming System</h1>
+          <p class="smaller" style="text-align: justify; font-size: 18px; margin-top: 1em; margin-bottom: 1em;">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
           </p>
           <div class="text-center">
@@ -27,7 +27,7 @@
           </div>
         </div>
 
-        <div class="col-6">
+        <div class="halfCell">
           <img class="img-fluid" src="./illust.png">
         </div>
 
@@ -35,17 +35,15 @@
     </div>
     
     <!-- Content -->
-    <div class="container-fluid plot-list-content w-75" id="content">
-      <div class="row" id="plot-list">
-          <!-- <button class="content button" onClick="addPlot()"> 
-            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="black" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
-              <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
-              <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-            </svg> 
-          </button> -->
+    <div class="main">
+      <div class="container-fluid plot-list-content w-75" id="content">
+        <div class="row" id="plot-list">
+          <h3 class="intro" id="intro">To start, let's try to add a new plot for your plant! Click the plus button!</h3>
+          <button type ="button" class="plus-button main addButton" onClick="addPlot()">
+            <i class="fa fa-plus"></i>
+          </button>
+        </div>
       </div>
-      <button type ="button" class="plus-button float-right" onClick="addPlot()"><i class="fa fa-plus"></i></button>
     </div>
 
     <!-- Modal -->
@@ -55,45 +53,41 @@
         <div class="modal-content">
           <div class="modal-body" id="modal-body">
             <div class="justify-content-center"><img class="plot-img" src="placeholder-modal.png"></div>
-            <div class="title" style="font-size: 24px;">Status Plot</div>
+            <h1 class="title" style="font-size: 24px;" id="modal-title"></h1>
               <!-- Buat Logicnya tinggal di buka di script.js kalian tambah2in aja -->
 
             <!-- Di bawah ini yang tolong dikerjakan ya gengs -->
             <div class="container-fluid col-12">
-              <div class="row">
-                <div class="col-4">
-                  <div class="title">Kelembapan</div>
-                  <div style="font-size: 1em;">76%</div>
-                </div>
-                <div class="col-4">
-                  <div class="title">Kadar Nutrisi</div>
-                  <div style="font-size: 1em;">76%</div>
-                </div>
-                <div class="col-4">
-                  <div class="title">Pencahayaan</div>
-                  <div style="font-size: 1em;">76%</div>
-                </div>
+              <div class="tanaman-content">
+                <h4 style="text-align:center">Kelembapan</h4>
+                <p style="text-align:center" id="humidity"></p>
+                <p style="text-align:center" id="humidity-indicator"></p>
               </div>
-
-              <div class="row">
-                <div class="col-6">
-                  <div class="title">Suhu</div>
-                  <div style="font-size: 1em;">
-                    <p id="temperature"></p>
-                    Status :<p id="temp-indicator"></p>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="title">Kualitas Tanah</div>
-                  <div style="font-size: 1em;">76%</div>
-                </div>
+              <div class="tanaman-content">
+                <h4 style="text-align:center">Kadar pH</h4>
+                <p style="text-align:center" id="ph"></p>
+                <p style="text-align:center" id="ph-indicator"></p>
+              </div>
+              <div class="tanaman-content">
+                <h4 style="text-align:center">Pencahayaan</h4>
+                <p style="text-align:center" id="Pencahayaan (Lux)"></p>
+                <p style="text-align:center" id="Pencahayaan (Lux) - indicator"></p>
+              </div>
+              <div class = "tanaman-content"> 
+                <h4 style="text-align:center">Suhu</h4>
+                <p style="text-align:center" id="suhu"></p>
+                <p style="text-align:center" id="ind-suhu"></p>
+              </div>
+              <div class = "tanaman-content">
+                <h4 style="text-align:center">Persentase Nitrogen</h4>
+                <p style="text-align:center" id="N"></p>
+                <p style="text-align:center" id="N-indicator"></p>
               </div>
             </div>
           </div>
 
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-default" style="border-color: red;" >Delete</button>
           </div>
         </div>
 
@@ -101,7 +95,7 @@
     </div>
 
     <div id="credits" class="credits">
-      Credits
+      <p>&copy;Kelompok Milestone 2 SPARTA 2020</p>
     </div>
 
 

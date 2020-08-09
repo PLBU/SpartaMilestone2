@@ -50,10 +50,22 @@ h3 {
     background-color: #f2f1ef;
     border-radius: 25px;
     padding-top: 12px;
-    padding-left: 6px;
+    padding-left: 24px;
     padding-right: 6px;
-    padding-bottom: 200px;
+    padding-bottom: 72px;
     margin: 32px;
+    position: relative;
+    display: flex;
+    text-align: left;
+}
+
+.intro {
+    padding: 32px;
+    padding-left: 64px;
+}
+
+#plot-list{
+    display: flex;
 }
 
 .plot-content{
@@ -68,6 +80,7 @@ h3 {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     object-fit: cover;
+    width: 99%;
 }
 
 .plot-check{
@@ -117,6 +130,65 @@ h3 {
     padding-left: 32px;
     padding-right: 32px;
     padding-top: 32px;
-    padding-bottom: 82px;
+    padding-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credits p{
     color: #f2f1ef;
+}
+
+.tanaman-content{
+    margin: 16px;
+    background-color: #ece4d5;
+    border-radius: 35px;
+    padding: 8px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addButton{
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+
+.image-landing{
+    width: 99%;
+}
+
+.lander{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-items: center;
+}
+
+.halfCell{
+    flex: 0.5;
+}
+
+@media only screen and (max-width: 530px){
+    .lander{
+        flex-direction: column;
+    }
+
+    .smartTitle{
+        margin-top: 0px !important;
+        font-size: xx-large !important;
+    }
+
+    .smaller{
+        font-size: medium !important;
+    }
+
+    .start-button{
+        margin-bottom: 24px;
+    }
 }
