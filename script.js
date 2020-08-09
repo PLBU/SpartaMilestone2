@@ -1,5 +1,6 @@
+var plotCount = 0
+
 function addPlot(){
-   var plotCount = 0
    const plotList = document.getElementById("plot-list")
 
    plotCount += 1
@@ -14,6 +15,9 @@ function addPlot(){
    statButton.setAttribute("type", "button")
    statButton.setAttribute("data-toggle", "modal")
    statButton.setAttribute("data-target", "#myModal")
+   statButton.onclick = ( () => {
+      document.getElementById('modal-title').innerHTML = "Status " + plotName.innerHTML
+   })
 
    const deleteButton = document.createElement("button")
    deleteButton.className = "content button"
