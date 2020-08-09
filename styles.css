@@ -138,6 +138,7 @@ h3 {
 
 .credits p{
     color: #f2f1ef;
+    font-size: medium;
 }
 
 .tanaman-content{
@@ -190,5 +191,9 @@ h3 {
 
     .start-button{
         margin-bottom: 24px;
+    }
+
+    .intro{
+        font-size: large;
     }
 }
