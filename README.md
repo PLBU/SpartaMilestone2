@@ -12,3 +12,4 @@ Dwi Kalam Amal Tauhid (16519021) - Ngebuat logic "kelembapan" di Javascript dan 
 M Rifandy Zulvan (16519078) - bagian suhu <br/>
 Shaffira Alya Mevia (16519174) - Web Design <br/>
 Prana Gusriana (16519008) - Bagian kelembapan ngedit-ngedit dikit <br/>
+Alexander Ludwig (16519195) - Bagian Persen Nitrogen <br/>
