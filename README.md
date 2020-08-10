@@ -14,3 +14,5 @@ Shaffira Alya Mevia (16519174) - Web Design <br/>
 Prana Gusriana (16519008) - Bagian kelembapan ngedit-ngedit dikit <br/>
 Ruhiyah Faradishi Widiaputri (16519181) - bagian persen nitrogen <br/>
 Alexander Ludwig (16519195) - Bagian persen Nitrogen <br/>
+
+Untuk dapat melihat hasil tugas kita, dapat melihat pada website https://panen.netlify.app/
