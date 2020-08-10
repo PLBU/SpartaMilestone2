@@ -4,5 +4,5 @@
 ## Nomor Kelompok: 02
 
 ### Pembagian Jobdesk:
-Renaldi Arlin (16519199) - Logic addPlot & deleteButton, Pembuatan modal, Merging & Deploying <br/>
-Faris Aziz (16519231) - Bagian suhu
+Renaldi Arlin (16519199) - Logic addPlot & deleteButton, Merging & Deploying <br/>
+Faris Aziz (16519231) - Bagian suhu <br/>
