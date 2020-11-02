@@ -1,5 +1,5 @@
 # SMART FARMING: SOLUSI BERBASIS APLIKASI SEBAGAI UPAYA MENGATASI PERMASALAHAN KETAHANAN PANGAN DI INDONESIA
-![Current Version](https://img.shields.io/badge/version-v1.0.0-blue)\
+![Current Version](https://img.shields.io/badge/version-v1.0.0-blue)
 
 ## Technologies Used
 * Netlify
