@@ -1,8 +1,15 @@
 # SMART FARMING: SOLUSI BERBASIS APLIKASI SEBAGAI UPAYA MENGATASI PERMASALAHAN KETAHANAN PANGAN DI INDONESIA
+![Current Version](https://img.shields.io/badge/version-v1.0.0-blue)\
 
-## Nama Kelompok: Pangan
-## Nomor Kelompok: 02
+## Technologies Used
+* Netlify
+* HTML
+* CSS
+* JS
 
+## About Us
+### Nama Kelompok: Pangan
+### Nomor Kelompok: 02
 ### Pembagian Jobdesk:
 Renaldi Arlin (16519199) - Logic addPlot & deleteButton, Merging & Deploying <br/>
 Faris Aziz (16519231) - Bagian suhu <br/>
@@ -16,4 +23,5 @@ Ruhiyah Faradishi Widiaputri (16519181) - bagian persen nitrogen <br/>
 Alexander Ludwig (16519195) - Bagian persen Nitrogen <br/>
 Andres Jerriel Sinabutar (16519190) - Membuat logic "kadar pH" di Javascript dan menyambungkan ke HTML <br/>
 
+## Deployment
 Untuk dapat melihat hasil tugas kita, dapat melihat pada website https://panen.netlify.app/
